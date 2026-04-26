@@ -1,0 +1,48 @@
+body {
+    background: #fff5f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Para que los corazones no creen barras de scroll */
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    text-align: center;
+    z-index: 10;
+    border: 2px solid #ffb6c1;
+}
+
+h1 { color: #d81b60; }
+
+#magic-btn {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#magic-btn:hover { transform: scale(1.1); }
+
+/* Estilo de los corazones animados */
+.heart {
+    position: absolute;
+    color: #ff4081;
+    font-size: 20px;
+    user-select: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
